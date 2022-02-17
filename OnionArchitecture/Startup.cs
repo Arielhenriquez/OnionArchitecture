@@ -9,6 +9,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.OpenApi.Models;
 using RepositoryLayer;
+using RepositoryLayer.RepositoryPattern;
+using ServiceLayer.CustomerService;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -36,6 +38,11 @@ namespace OnionArchitecture
             });
             services.AddDbContext<ApplicationDbContext> 
             (item => item.UseSqlServer(Configuration.GetConnectionString("myconn")));
+
+            #region Services Injected  
+            services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
+            services.AddTransient<ICustomerService, CustomerService>();
+            #endregion
 
         }
 
