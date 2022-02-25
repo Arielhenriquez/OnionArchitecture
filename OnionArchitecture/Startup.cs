@@ -20,6 +20,7 @@ namespace OnionArchitecture
 {
     public class Startup
     {
+        private readonly string _EnableCors = "";
         public Startup(IConfiguration configuration)
         {
             Configuration = configuration;
@@ -36,6 +37,17 @@ namespace OnionArchitecture
             {
                 c.SwaggerDoc("v1", new OpenApiInfo { Title = "OnionArchitecture", Version = "v1" });
             });
+
+            //Configurando CORS
+            services.AddCors(options =>
+            {
+                options.AddPolicy(name: _EnableCors, builder =>
+                {
+                    builder.SetIsOriginAllowed(origin => new Uri(origin).Host == "127.0.0.1")
+                    .AllowAnyHeader().AllowAnyMethod();
+                });
+            });
+
             services.AddDbContext<ApplicationDbContext> 
             (item => item.UseSqlServer(Configuration.GetConnectionString("myconn")));
 
@@ -57,6 +69,8 @@ namespace OnionArchitecture
             }
 
             app.UseHttpsRedirection();
+
+            app.UseCors(_EnableCors);
 
             app.UseRouting();
 
