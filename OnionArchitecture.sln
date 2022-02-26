@@ -3,13 +3,20 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.0.32112.339
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OnionArchitecture", "OnionArchitecture\OnionArchitecture.csproj", "{8A344080-FD36-4BD0-A072-BA8D04C0163F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "OnionArchitecture", "OnionArchitecture\OnionArchitecture.csproj", "{8A344080-FD36-4BD0-A072-BA8D04C0163F}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "DomainLayer", "DomainLayer\DomainLayer.csproj", "{F40D627B-6DEF-43A1-A091-AF6D264D19D1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DomainLayer", "DomainLayer\DomainLayer.csproj", "{F40D627B-6DEF-43A1-A091-AF6D264D19D1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{30AD3782-74E2-4C0A-92D3-5B05423F85E2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "RepositoryLayer", "RepositoryLayer\RepositoryLayer.csproj", "{30AD3782-74E2-4C0A-92D3-5B05423F85E2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{9C7C1D4C-691F-456D-B71E-8332166EDC1B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ServiceLayer", "ServiceLayer\ServiceLayer.csproj", "{9C7C1D4C-691F-456D-B71E-8332166EDC1B}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{B70384C3-B5D3-4100-A76E-2E8CA1F3A1E0}"
+	ProjectSection(SolutionItems) = preProject
+		..\..\..\Downloads\Frontend para API Onion Architecture Clientes\index.html = ..\..\..\Downloads\Frontend para API Onion Architecture Clientes\index.html
+		..\..\..\Downloads\Frontend para API Onion Architecture Clientes\script.js = ..\..\..\Downloads\Frontend para API Onion Architecture Clientes\script.js
+		..\..\..\Downloads\Frontend para API Onion Architecture Clientes\style.css = ..\..\..\Downloads\Frontend para API Onion Architecture Clientes\style.css
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
